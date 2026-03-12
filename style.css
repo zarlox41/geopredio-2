@@ -5,8 +5,8 @@
     --surface-alt: #1f2e4d;
     --border: #2f4266;
     --text: #e2e8f0;
-    --text-soft: #94a3b8;
-    --primary: #3b82f6;
+    --text-soft: #aab8c9;
+    --primary: #336cde;
     --primary-hover: #2563eb;
     --radius-lg: 16px;
     --radius-md: 12px;
@@ -52,7 +52,7 @@ header h2 {
     display: grid;
     height: calc(100vh - 4.5em);
     grid-template-columns: minmax(250px, 320px) 1fr 1fr 1fr;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 5fr 1fr;
     align-items: stretch;
     gap: 1rem;
     padding: 1rem;
