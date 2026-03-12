@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>GeoPredio | Consulta geográfica de predios en Santiago de Cali</title>
         <meta name="description" content="GeoPredio es una herramienta web para la búsqueda geográfica de predios urbanos en el Distrito de 
         Santiago de Cali. Consulta predios mediante identificadores como ID PREDIO o NPN, o directamente con coordenadas geográficas.
@@ -11,15 +12,16 @@
         <meta name="author" content="Cristian Quintero Salazar | Carlos Bermúdez López | Francisco Orozco Suárez">
         <meta name="robots" content="index, follow">
         <link rel="canonical" href="https://www.misitioweb.com"> <!-- Permite que el sitio web nunca se mueva de su link original (seguridad) -->
+        <link rel="preconnect" href="https://unpkg.com" crossorigin>
+        <link rel="preconnect" href="https://tile.openstreetmap.org" crossorigin>
+        <link rel="dns-prefetch" href="//server.arcgisonline.com">
+        <link rel="dns-prefetch" href="//ows.mundialis.de">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="img/marca.png">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-            crossorigin="">
     </head>
     <body>
         <header>
-            <h2><img class="icon" src="img/marca.png" alt="" width="32" height="32"> GeoPredio</h2>
+            <h2><img class="icon" src="img/marca.png" alt="" width="32" height="32" decoding="async" fetchpriority="high"> GeoPredio</h2>
         </header>
         <main>
             <div class="container">
@@ -40,16 +42,13 @@
                 </div>
                 <section class="item3">
                     <h2>Tabla</h2>
-                    <img class="tabla" src="img/tabla.png" alt="tabla" loading="lazy" width="600" height="150">
+                    <img class="tabla" src="img/tabla.png" alt="tabla" loading="lazy" decoding="async" fetchpriority="low" width="600" height="150">
                 </section>
             </div>
         </main>
         <!-- <footer>
             <p>Información de Contacto</p>
         </footer> -->
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </body>
 </html>
